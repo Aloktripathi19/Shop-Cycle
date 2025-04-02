@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.admin-con {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a1d37 0%, #3b5998 100%);
+    animation: fadeIn 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-con h2 {
+    text-align: center;
+    color: #b3cde0;
+    margin-bottom: 1.2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: slideIn 0.5s ease-out;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    font-family: "Playfair Display", serif;
+    transition: color 0.3s ease;
+}
+
+.admin-con h2:hover {
+    color: #ffffff;
+}
+
+.pending-shop {
+    background: #e8ecef;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    border: 1px solid #a3bffa;
+}
+
+.pending-shop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.pending-shop img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 2px solid #a3bffa;
+}
+
+.pending-shop img:hover {
+    transform: scale(1.05);
+}
+
+.shop-detail {
+    padding: 0.5rem;
+    flex: 1;
+    min-width: 230px;
+}
+
+.shop-detail h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Playfair Display", serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.shop-detail h3 span {
+    color: crimson;
+}
+
+.pending-shop strong {
+    color: rgb(255, 0, 0);
+}
+
+.shop-detail h3:hover {
+    color: #4169e1;
+    transform: translateX(5px);
+}
+
+.shop-detail p {
+    margin: 0.3rem 0;
+    color: #4a5e77;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.shop-detail p:hover {
+    color: #a3bffa;
+}
+
+.price-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 0.5rem;
+    flex: 2;
+    min-width: 250px;
+}
+
+.indi-iron,
+.indi-wash,
+.both-price {
+    background: #d6deeb;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+    border: 1px solid #a3bffa;
+}
+
+.indi-iron:hover,
+.indi-wash:hover,
+.both-price:hover {
+    background: #c9d2e3;
+}
+
+.price-detail h4 {
+    color: #2a4066;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+.price-detail h4:hover {
+    color: #1e90ff;
+}
+
+.price-detail p {
+    margin: 0.4rem 0;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.price-detail p:hover {
+    color: #4169e1;
+}
+
+.shop-status {
+    padding: 0.4rem;
+    flex: 1;
+    min-width: 205px;
+}
+
+.shop-status h4 {
+    color: #4169e1;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+.shop-status h4:hover {
+    color: #00ced1;
+}
+
+.shop-status p {
+    margin: 0.5rem 0;
+    font-weight: 500;
+    color: #4a5e77;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.shop-status p:hover {
+    color: #a3bffa;
+}
+
+.admin-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+}
+
+.admin-control button {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: "Roboto", sans-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.acpt {
+    background: #00ced1;
+    color: #ffffff;
+}
+
+.acpt:hover {
+    background: #00b7ba;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.rjt {
+    background: #b22222;
+    color: #ffffff;
+}
+
+.rjt:hover {
+    background: #941c1c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.call {
+    background: #ffd700;
+    color: #0a1d37;
+}
+
+.call:hover {
+    background: #e6c200;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #0a1d37;
+}
+.whtsapp {
+    background: #25D366;
+    font-size: 20px;
+    color: white;
+}
+
+.whtsapp:hover {
+    background: #1EBE5D;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .pending-shop {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pending-shop img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .price-detail {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-con {
+        padding: 1rem;
+    }
+
+    .admin-con h2 {
+        font-size: 2.5rem;
+    }
+
+    .pending-shop img {
+        height: 150px;
+    }
+
+    .shop-detail,
+    .price-detail,
+    .shop-status,
+    .admin-control {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .shop-detail h3 {
+        font-size: 1.5rem;
+    }
+
+    .price-detail h4,
+    .shop-status h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-con h2 {
+        font-size: 2rem;
+    }
+
+    .shop-detail h3 {
+        font-size: 1.3rem;
+    }
+
+    .admin-control button {
+        padding: 0.5rem 1rem;
+        width: 80px;
+        font-size: 0.9rem;
+    }
+
+    .pending-shop {
+        padding: 1rem;
+    }
+
+    .price-detail h4,
+    .shop-status h4 {
+        font-size: 1.1rem;
+    }
+}

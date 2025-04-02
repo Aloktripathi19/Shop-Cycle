@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-con {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 40px 20px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+.my-con h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+    animation: fadeIn 1s ease-in;
+}
+
+.my-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-box:hover {
+    box-shadow: 0 12px 40px rgba(0, 212, 255, 0.3);
+}
+
+.my-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.shop-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #00d4ff;
+    transition: transform 0.3s ease;
+}
+
+.my-info,
+.individual-price,
+.togther-price,
+.my-status {
+    margin: 20px 0;
+}
+
+.my-box h3 {
+    color: #00d4ff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00d4ff;
+    padding-bottom: 5px;
+}
+
+.my-info p,
+.individual-price p,
+.togther-price p,
+.my-status p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #e0e0e0;
+}
+
+p strong {
+    color: #ffd700;
+}
+
+.price-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.price-columns div {
+    flex: 1;
+    min-width: 150px;
+}
+
+.price-columns h4 {
+    color: #ff007a;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.status-text button {
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    border: none;
+    margin-left: 10px;
+    padding: 5px 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: zoomEffect 3s infinite ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.edit-price{
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    background-color: #ff6600;
+    cursor: pointer;
+}
+.edit-price:hover{
+    transform: scale(1.05);
+    background-color: red;
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.my-status .verify-text {
+    color: #00ff9d;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-con h2 {
+        font-size: 2rem;
+    }
+
+    .my-box {
+        padding: 15px;
+    }
+
+    .my-info h3,
+    .individual-price h3,
+    .togther-price h3,
+    .my-status h3 {
+        font-size: 1.5rem;
+    }
+
+    .price-columns {
+        flex-direction: column;
+    }
+
+    .shop-image {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-con {
+        padding: 20px 10px;
+    }
+
+    .my-con h2 {
+        font-size: 1.8rem;
+    }
+
+    .my-info p,
+    .individual-price p,
+    .togther-price p,
+    .my-status p {
+        font-size: 1rem;
+    }
+
+    .status-text button {
+        padding: 3px 10px;
+    }
+}
