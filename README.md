@@ -1,4 +1,4 @@
-# Spin-Cycle - Laundry Service Platform
+# Spin-Cycle - Laundry Service Platform 🧺🧼👕
 
 Washkart is a web-based platform that allows users to explore various laundry shops, view their services and prices, and contact shop owners directly via WhatsApp or phone call. The platform includes an admin dashboard for verifying and approving shops.
 
