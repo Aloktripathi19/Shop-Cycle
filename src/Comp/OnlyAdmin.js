@@ -30,7 +30,7 @@ function OnlyAdmin() {
   return (
     <div className="form-con">
     <div className="form-box">
-      <h2>Create Account As shop Owner</h2>
+      <h2>Create Account As a Admin</h2>
 
       <div className="input-group">
         <p className='msg'>{msg}</p>

@@ -18,9 +18,9 @@ function Footer() {
 
                 <div className="footer-section">
                     <h3>Contact Us</h3>
-                    <p>📍 Location: Pune, Maharashtra</p>
-                    <p>📞 <a href="tel:+9199XXXXXX1">+91 99XXXXXXX1</a></p>
-                    <p>📧 <a href="mailto:info@washitnow.com">info@washitnow.com</a></p>
+                    <p>📍 Location: New Delhi</p>
+                    <p>📞 <a href="tel:+917999837117">+91 7999837117</a></p>
+                    <p>📧 <a href="mailto:anshit768704@gmail.com">anshit768704@gmail.com</a></p>
                 </div>
 
 
@@ -33,7 +33,7 @@ function Footer() {
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/919621301339" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/917999837117" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>
                     </div>
