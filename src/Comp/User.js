@@ -22,14 +22,14 @@ function User() {
       navigate("/login");
     }
     if (obj.state._id) {
-      axios.get("http://localhost:5000/alluser", { "headers": { "Authorization": obj.state.token, "uid": obj.state._id } }).then((res) => {
+      axios.get(`${process.env.REACT_APP_BASE_URL}/alluser`, { "headers": { "Authorization": obj.state.token, "uid": obj.state._id } }).then((res) => {
         udata(res.data)
       })
     }
   }, [f,obj.state._id])
 
   let del = (id) => {
-    axios.delete(`http://localhost:5000/deluser/${id}`).then((res) => {
+    axios.delete(`${process.env.REACT_APP_BASE_URL}/deluser/${id}`).then((res) => {
       setF(!f)
     })
   }

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import '../CompCss/Reg.css'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Footer from './Footer'
+import Nav from './Nav'
 
 function Reg() {
   let navigate = useNavigate()
@@ -14,7 +16,7 @@ function Reg() {
   
   let reg = ()=>{
     if (data._id !== "" && data.name !== "" && data.phno !== "" && data.pwd !== "") {
-      axios.post("http://localhost:5000/reg",data).then((res)=>{
+      axios.post(`${process.env.REACT_APP_BASE_URL}/reg`,data).then((res)=>{
         umsg(res.data.msg)
         navigate("/login")
       })
@@ -24,6 +26,8 @@ function Reg() {
   }
 
   return (
+    <>
+    <Nav/>
     <div className="form-con">
       <div className="form-box">
         <h2>Create Account</h2>
@@ -43,6 +47,8 @@ function Reg() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

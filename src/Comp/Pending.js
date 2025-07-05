@@ -21,7 +21,7 @@ function Pending() {
     }
     if (obj.state._id) {
 
-      axios.get("http://localhost:5000/allshop", { "headers": { "Authorization": obj.state.token, "uid": obj.state._id } }).then((res) => {
+      axios.get(`${process.env.REACT_APP_BASE_URL}/allshop`, { "headers": { "Authorization": obj.state.token, "uid": obj.state._id } }).then((res) => {
         udata(res.data)
       })
     }
@@ -29,7 +29,7 @@ function Pending() {
 
 
   let decision = (id, st) => {
-    axios.put(`http://localhost:5000/shopon/${id}`, { "verified": st }).then((res) => {
+    axios.put(`${process.env.REACT_APP_BASE_URL}/shopon/${id}`, { "verified": st }).then((res) => {
       setF(!f)
     })
   }
@@ -44,7 +44,7 @@ function Pending() {
           <>
             {
               str.verified === "pending" && <div className='pending-shop'>
-                <img src={`http://localhost:5000/simgs/${str.simg}`} alt="Shop" />
+                <img src={`${process.env.REACT_APP_BASE_URL}/simgs/${str.simg}`} alt="Shop" />
                 <div className='shop-detail'>
                   <h3><span>Shop Name:</span> {str.name}</h3>
                   <p><strong>Owner Name:</strong> {str.uname}</p>

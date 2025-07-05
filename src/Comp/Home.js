@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import Ct from './Ct'
 import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
+import Footer from './Footer'
+import Nav from './Nav'
 
 function Home() {
 
@@ -15,7 +17,7 @@ function Home() {
     if (x !== undefined) {
       obj.updstate(JSON.parse(x))
     }
-    axios.get("http://localhost:5000/verifiedshop").then((res) => {
+    axios.get(`${process.env.REACT_APP_BASE_URL}/verifiedshop`).then((res) => {
       udata(res.data)
     })
     console.log("value of cookie",Cookies.get("auth"))
@@ -36,11 +38,13 @@ function Home() {
 
 
   return (
+    <>
+    <Nav/>
     <div className='home-con'>
       <h1>Smart Laundry Solutions for Your Busy Life!</h1>
       {data.map((str) => {
         return (<div className='home-card'>
-          <img src={`http://localhost:5000/simgs/${str.simg}`} alt='product' onClick={() => km(str)} />
+          <img src={`${process.env.REACT_APP_BASE_URL}/simgs/${str.simg}`} alt='product' onClick={() => km(str)} />
           <div className='home-content'>
             <h2>🏠 {str.name}</h2>
             <h4>📍 {str.loct}</h4>
@@ -57,6 +61,8 @@ function Home() {
       })
       }
     </div>
+    <Footer/>
+    </>
   )
 }
 

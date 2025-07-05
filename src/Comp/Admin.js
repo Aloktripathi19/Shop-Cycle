@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../CompCss/Madmin.css'
 import { Link, Outlet } from 'react-router-dom'
+import Nav from './Nav';
+import Footer from './Footer';
 
 
 function Admin() {
@@ -12,6 +14,8 @@ function Admin() {
     }
   };
   return (
+     <>
+    <Nav/>
     <div className='admin-main' onClick={handleOutsideClick}>
       <button 
         className='menu-btn' 
@@ -37,6 +41,8 @@ function Admin() {
         <Outlet />
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

@@ -4,6 +4,8 @@ import axios from 'axios'
 import Ct from './Ct'
 import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
+import Footer from './Footer'
+import Nav from './Nav'
 
 function Addshop() {
     let obj = useContext(Ct)
@@ -43,7 +45,7 @@ function Addshop() {
             fd.append("uname", obj.state.name)
             fd.append("phone",obj.state.phno)
 
-            axios.post("http://localhost:5000/addshop", fd,{"headers":{"Authorization":obj.state.token}}).then((res) => {
+            axios.post(`${process.env.REACT_APP_BASE_URL}/addshop`, fd,{"headers":{"Authorization":obj.state.token}}).then((res) => {
                 navigate("/home")
             })
         } else {
@@ -53,7 +55,8 @@ function Addshop() {
 
 
     return (
-
+         <>
+    <Nav/>
         <div className='shop-con'>
             <div className='shop-box'>
                 <h2>🛍️ Add Your Shop</h2>
@@ -101,6 +104,8 @@ function Addshop() {
                 <button onClick={add}>🚀 Add It</button>
             </div>
         </div>
+        <Footer/>
+    </>
     )
 }
 

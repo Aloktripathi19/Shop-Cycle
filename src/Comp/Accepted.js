@@ -23,7 +23,7 @@ function Accepted() {
     }
     if (obj.state._id) {
 
-      axios.get("http://localhost:5000/allshop", { "headers": { "Authorization": obj.state.token, "uid": obj.state._id } }).then((res) => {
+      axios.get(`${process.env.REACT_APP_BASE_URL}/allshop`, { "headers": { "Authorization": obj.state.token, "uid": obj.state._id } }).then((res) => {
         udata(res.data)
       })
     }
@@ -34,7 +34,7 @@ function Accepted() {
   let del = (id) => {
     let ff = window.confirm("Are you sure you want to delete this post?")
     if (ff) {
-      axios.delete(`http://localhost:5000/shopdel/${id}`).then((res) => {
+      axios.delete(`${process.env.REACT_APP_BASE_URL}/shopdel/${id}`).then((res) => {
         setF(!f)
       })
     }
@@ -50,7 +50,7 @@ function Accepted() {
       {data.map((str) => {
         return (<>
           {str.verified === "accept" && <div className='pending-shop'>
-            <img src={`http://localhost:5000/simgs/${str.simg}`} alt="Shop" />
+            <img src={`${process.env.REACT_APP_BASE_URL}/simgs/${str.simg}`} alt="Shop" />
             <div className='shop-detail'>
               <h3><span>Shop Name:</span> {str.name}</h3>
               <p><strong>Owner Name:</strong> {str.uname}</p>

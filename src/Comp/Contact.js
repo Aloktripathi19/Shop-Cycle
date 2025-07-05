@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import '../CompCss/Contact.css'
 import Ct from './Ct'
 import Cookies from 'js-cookie'
+import Nav from './Nav'
+import Footer from './Footer'
 function Contact() {
   let obj = useContext(Ct)
     useEffect(() => {
@@ -11,6 +13,8 @@ function Contact() {
       }
     }, [])
   return (
+     <>
+    <Nav/>
     <div className="contact-container">
       {/* Contact Information */}
       <div className="contact-info">
@@ -53,6 +57,8 @@ function Contact() {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

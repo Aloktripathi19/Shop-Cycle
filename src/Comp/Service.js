@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import '../CompCss/Service.css'
 import Ct from './Ct'
 import Cookies from 'js-cookie'
+import Nav from './Nav'
+import Footer from './Footer'
 
 function Service() {
   let obj = useContext(Ct)
@@ -12,6 +14,8 @@ function Service() {
     }
   }, [])
   return (
+     <>
+    <Nav/>
     <div className="services-container">
       <h2 className="services-heading">🧺 Our Services</h2>
 
@@ -42,6 +46,8 @@ function Service() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

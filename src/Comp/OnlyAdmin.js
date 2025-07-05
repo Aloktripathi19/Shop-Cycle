@@ -14,7 +14,7 @@ function OnlyAdmin() {
 
     let reg = ()=>{
       if (data._id !== "" && data.name !== "" && data.phno !== "" && data.pwd !== "") {
-        axios.post("http://localhost:5000/reg",data).then((res)=>{
+        axios.post(`${process.env.REACT_APP_BASE_URL}/reg`,data).then((res)=>{
           umsg(res.data.msg)
           navigate("/login")
         })
