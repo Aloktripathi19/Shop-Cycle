@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Nav from './Nav'
+import Footer from './Footer'
 
 function OnlyAdmin() {
     let navigate = useNavigate()
@@ -28,6 +30,8 @@ function OnlyAdmin() {
 
 
   return (
+    <>
+    <Nav/>
     <div className="form-con">
     <div className="form-box">
       <h2>Create Account As a Admin</h2>
@@ -47,6 +51,8 @@ function OnlyAdmin() {
 
     </div>
   </div>
+  <Footer/>
+  </>
   )
 }
 
